@@ -35,16 +35,25 @@ body {
     font-size: 1.2rem; }
     .navbar .navbar-brand:hover,
     .navbar .nav-link:hover {
-      color: white;
-      animation-name: zoomletter;
-      animation-duration: .5s;
-      animation-fill-mode: forwards; }
+      color: white; }
 
 .navbar-toggler:focus {
   box-shadow: none; }
 
 .boton_nav {
   background-color: #05050e; }
+
+@media screen and (min-width: 992px) {
+  .navbar-brand,
+  .nav-link {
+    color: #82b3ae;
+    font-size: 1.2rem; }
+    .navbar-brand:hover,
+    .nav-link:hover {
+      color: white;
+      animation-name: zoomletter;
+      animation-duration: .5s;
+      animation-fill-mode: forwards; } }
 
 footer {
   display: flex;
@@ -110,7 +119,8 @@ h1, h2 {
   display: grid;
   grid-template-rows: auto auto;
   grid-template-columns: auto minmax(300px, 800px) auto;
-  grid-template-areas: '. info .' '. skills .';
+  grid-template-areas: '. info .'
+ '. skills .';
   color: white; }
 
 .description {
