@@ -95,10 +95,12 @@ footer {
     .index_contacto a:hover {
       color: white; }
   .index_contacto li {
+    font-size: 1.5rem;
     display: flex;
     margin: 20px 0; }
 
 h1, h2 {
+  font-size: 2.5rem;
   text-align: center;
   color: white;
   padding: 5px; }
@@ -164,7 +166,8 @@ h1, h2 {
   flex-wrap: wrap;
   justify-content: space-evenly;
   padding: 20px;
-  margin: 50px 0; }
+  margin: 50px 0; 
+  }
   .card_container .card_knowledge {
     width: 40%;
     border: 10px solid #121337;
@@ -182,27 +185,30 @@ h1, h2 {
       width: 90%; } }
 
 .card_project {
-  width: 30%;
+  position: relative;
+  width: 100%;
   border: 5px solid #121337;
   color: #82b3ae;
   border-radius: 20px;
   background-color: #090a1c;
   min-width: 330px;
-  max-width: 400px;
-  margin: 20px; }
-  .card_project img {
-    width: 100%;
-    border-radius: 14px; }
+  max-width: 720px;
+  margin: 20px; 
+  margin-bottom: 75px;}
   .card_project .text {
-    height: 150px; }
+    margin-bottom: 75px;
+    height: min-content; }
     .card_project .text h6 {
       text-align: center;
       font-size: 1.5rem;
-      padding-top: 5px; }
+      padding-top: 15px; }
     .card_project .text p {
       font-size: 1rem;
       padding: 10px 15px; }
   .card_project .button_container {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
     display: flex;
     padding: 10px;
     justify-content: space-evenly;
@@ -213,11 +219,15 @@ h1, h2 {
 
 @media screen and (max-width: 480px) {
   .card_project {
-    min-width: 300px; }
+    max-width: 100%;
+    padding: 0;}
+    .card_project .text {
+      margin-bottom: 75px;
+    }
     .card_project .button_container {
-      flex-direction: column; }
+      flex-direction: row; }
       .card_project .button_container .card_project__button {
-        margin: 10px 0;
+        margin: 5px 0;
         min-width: 120px; } }
 
 .card_project__button {
